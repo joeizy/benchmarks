@@ -14,7 +14,7 @@ var options = new ServiceBusSessionProcessorOptions
 {
     AutoCompleteMessages = false, // manually complete the message so that we capture timestamp after the full cycle of the message processing
     MaxConcurrentSessions = 20, // sender is using round robin across 20 sessions so we want to receive them in parallel as well
-    MaxConcurrentCallsPerSession = 1, // process session in sequence
+    MaxConcurrentCallsPerSession = 1, // process each session in sequence
 };
 
 await using ServiceBusSessionProcessor processor = client.CreateSessionProcessor(queueName, options);
