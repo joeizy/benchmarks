@@ -10,7 +10,7 @@ Although these types of services are typically regarded as asynchronous, there p
 1. Use the `ConsoleAppReadOutput` project to read the producer's output and the consumer/watcher output. This will print the stats of the delay to the console. (Don't forget to  update file names in source code for `ConsoleAppReadOutput`.)
 
 # Notes
-Keep note of whether the service you are using has any form of partitioning the data to help scale out which may also have an impact on latency/delay. Also, different service tiers/skus may have an impact on latency/delay even if the target capacity/throughput is the same.
+Keep note of whether the service you are using has any form of partitioning the data to help scale out which may also have an impact (positive or negative) on latency/delay. Also, different service tiers/skus may have an impact on latency/delay even if the target capacity/throughput is the same.
 
 ## Azure Service Bus
 Expect substantially different delays between the Standard Tier in Service Bus and the Premium Tier.
