@@ -3,7 +3,7 @@ Benchmarks for services which reliably transfer data from a producer to a consum
 
 Although these types of services are typically regarded as asynchronous, there performance in terms of additional delay they introduce can have an impact on user experience for example in transferring data between two microservices where the receiving service will have stale data until it receives the update.
 
-# Running
+# Setup & Running
 1. Populate the values for connection strings, db names, etc. in the source code for the projects you want to run.
 1. Start the relevent projects.
 1. Stop the projects and save the console output to a csv file. (Can do this with copy & paste or redirecting console output.)
