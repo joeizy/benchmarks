@@ -16,7 +16,7 @@ These tests are not intended to measure the throughput of the transport but the 
 - Different service tiers and skus may have an impact on latency/delay even if the target capacity and/or throughput is the same. Test with the tier that is relevent to your scenario.
 - Be cautious of service limits and machine capabilities. Saturating the service (esp. in lower tiers) can happen when the producer is in a tight loop doing no work. If the producer gets too far ahead of the consumer you will be artificially increasing your delay time which has nothing to do with service but is instead a factor of under provisioned capacity. This is especially true when using PAAS services which have documented limits at different SKU or scale out levels but may also happen due to network bandwidth, local machine limits, etc.
 - Check your "queue" or "work backlog" throughout the test and after the test is complete. If it grows too big or the remaining work in queue is more than a few items at the time you stop the test, your producer may be getting too far ahead of your consumer and affecting your results.
-- Consider slowing down the producer with artificial delays if it getting too far ahead.
+- Consider slowing down the producer with artificial delays if it is getting too far ahead.
 
 ## Azure Service Bus
 Expect substantially different delays between the Basic & Standard Tiers in Service Bus and the Premium Tier.
