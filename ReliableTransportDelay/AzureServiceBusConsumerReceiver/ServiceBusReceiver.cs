@@ -13,8 +13,8 @@ await using var client = new ServiceBusClient(connectionString);
 var options = new ServiceBusSessionProcessorOptions
 {
     AutoCompleteMessages = false,
-    MaxConcurrentSessions = 20,
-    MaxConcurrentCallsPerSession = 1,
+    MaxConcurrentSessions = 20, // sender is using round robin across 20 sessions so we want to receive them in parallel as well
+    MaxConcurrentCallsPerSession = 1, // process session in sequence
 };
 
 await using ServiceBusSessionProcessor processor = client.CreateSessionProcessor(queueName, options);
