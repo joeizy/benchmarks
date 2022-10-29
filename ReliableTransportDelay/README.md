@@ -14,4 +14,4 @@ Although these types of services are typically regarded as asynchronous, there p
 - Different service tiers and skus may have an impact on latency/delay even if the target capacity and/or throughput is the same.
 
 ## Azure Service Bus
-Expect substantially different delays between the Standard Tier in Service Bus and the Premium Tier.
+Expect substantially different delays between the Basic & Standard Tiers in Service Bus and the Premium Tier.
