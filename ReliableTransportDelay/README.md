@@ -11,7 +11,8 @@ Although these types of services are typically regarded as asynchronous, there p
 
 # Notes
 - Keep note of whether the service you are using has any form of partitioning the data to help scale out which may also have an impact (positive or negative) on latency/delay.
-- Different service tiers and skus may have an impact on latency/delay even if the target capacity and/or throughput is the same.
+- Different service tiers and skus may have an impact on latency/delay even if the target capacity and/or throughput is the same. Test with the tier that is relevent to your scenario.
+- Be cautious of service limits and machine capabilities. Saturating the service (esp. in lower tiers) can happen when the producer is in a tight loop doing no work. If the producer gets too far ahead of the consumer you will be artificially increasing your delay time which has nothing to do with service but is instead a factor of under provisioned capacity. This is especially true when using PAAS services which have documented limits at different SKU or scale out levels but may also happen due to network bandwidth, local machine limits, etc.
 
 ## Azure Service Bus
 Expect substantially different delays between the Basic & Standard Tiers in Service Bus and the Premium Tier.
