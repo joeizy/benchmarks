@@ -17,13 +17,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AzureCosmosProducerInsert",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MongoConsumerChangeStream", "MongoConsumerChangeStream\MongoConsumerChangeStream.csproj", "{BE1A2538-E6F6-4210-B3F8-394D4516F87E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MongoConsumerChangeStreamToServiceBusInsert", "MongoConsumerChangeStreamToServiceBusInsert\MongoConsumerChangeStreamToServiceBusInsert.csproj", "{2978FB91-6956-4F1A-9C4B-6050629DC4D6}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MongoProducerInsert", "MongoProducerInsert\MongoProducerInsert.csproj", "{BAC14678-3B03-4A10-B951-4F9974E94D2D}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AzureServiceBusConsumerReceiver", "AzureServiceBusConsumerReceiver\AzureServiceBusConsumerReceiver.csproj", "{E42B3683-E4FF-4CF1-800A-045FC5DC7C55}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AzureServiceBusProducerSender", "AzureServiceBusProducerSender\AzureServiceBusProducerSender.csproj", "{78DE30E2-30DF-4762-9D07-437F001C3827}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MongoConsumerChangeStreamToServiceBusSender", "MongoConsumerChangeStreamToServiceBusSender\MongoConsumerChangeStreamToServiceBusSender.csproj", "{B8F1A4BD-2B5F-4C47-A339-64DBF8E723B4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,10 +47,6 @@ Global
 		{BE1A2538-E6F6-4210-B3F8-394D4516F87E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BE1A2538-E6F6-4210-B3F8-394D4516F87E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BE1A2538-E6F6-4210-B3F8-394D4516F87E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2978FB91-6956-4F1A-9C4B-6050629DC4D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2978FB91-6956-4F1A-9C4B-6050629DC4D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2978FB91-6956-4F1A-9C4B-6050629DC4D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2978FB91-6956-4F1A-9C4B-6050629DC4D6}.Release|Any CPU.Build.0 = Release|Any CPU
 		{BAC14678-3B03-4A10-B951-4F9974E94D2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{BAC14678-3B03-4A10-B951-4F9974E94D2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BAC14678-3B03-4A10-B951-4F9974E94D2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -63,6 +59,10 @@ Global
 		{78DE30E2-30DF-4762-9D07-437F001C3827}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{78DE30E2-30DF-4762-9D07-437F001C3827}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{78DE30E2-30DF-4762-9D07-437F001C3827}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8F1A4BD-2B5F-4C47-A339-64DBF8E723B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8F1A4BD-2B5F-4C47-A339-64DBF8E723B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8F1A4BD-2B5F-4C47-A339-64DBF8E723B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8F1A4BD-2B5F-4C47-A339-64DBF8E723B4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -71,10 +71,10 @@ Global
 		{A83A58AE-063C-49FD-9900-F16F122182D7} = {9FBECFD4-A8EB-4E76-9AAA-2F8F564F83EE}
 		{D5AB0AB7-FD5B-4FE2-9D54-EF764A723106} = {9FBECFD4-A8EB-4E76-9AAA-2F8F564F83EE}
 		{BE1A2538-E6F6-4210-B3F8-394D4516F87E} = {6888B296-859D-418E-ADEF-63FEA8E6A8A0}
-		{2978FB91-6956-4F1A-9C4B-6050629DC4D6} = {6888B296-859D-418E-ADEF-63FEA8E6A8A0}
 		{BAC14678-3B03-4A10-B951-4F9974E94D2D} = {6888B296-859D-418E-ADEF-63FEA8E6A8A0}
 		{E42B3683-E4FF-4CF1-800A-045FC5DC7C55} = {11C8A3AC-24FD-45D6-B329-DD2F94C92D5C}
 		{78DE30E2-30DF-4762-9D07-437F001C3827} = {11C8A3AC-24FD-45D6-B329-DD2F94C92D5C}
+		{B8F1A4BD-2B5F-4C47-A339-64DBF8E723B4} = {6888B296-859D-418E-ADEF-63FEA8E6A8A0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {496E29A0-F094-42CA-A3AD-DF8DA0641B8D}
